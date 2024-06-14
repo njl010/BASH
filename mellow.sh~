@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+sudo dnf install nginx -y
+
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl status nginx
+
+sudo firewall-cmd --add-service=http --per
+sudo firewall-cmd --reload
+
+sudo systemctl restart nginx
